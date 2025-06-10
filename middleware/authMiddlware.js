@@ -17,7 +17,7 @@ const protectMiddlware = async (req, res, next) => {
       res.status(401).json({ msg: "Error In JSWT TOKEN", error });
 
       next();
-    }
+    }   
   } else {
     res.status(404).json({ msg: "no token" });
   }
